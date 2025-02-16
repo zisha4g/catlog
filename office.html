@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retail Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Retail Store</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="cellphones.html">cellphones</a></li>
+                <li><a href="office.html">All your office needs</a></li>
+                <li><a href="4gonwheels.com">Our retail store</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h2>Featured Products</h2>
+            <div class="content">
+                <aside class="filters">
+                    <h3>Filters</h3>
+                    <div class="filter-group">
+                        <label for="price">Price:</label>
+                        <input type="range" id="price" name="price" min="0" max="200">
+                    </div>
+                    <div class="filter-group">
+                        <label for="category">Category:</label>
+                        <select id="category">
+                            <option value="all">All</option>
+                            <option value="category1">Category 1</option>
+                            <option value="category2">Category 2</option>
+                            <option value="category3">Category 3</option>
+                        </select>
+                    </div>
+                    <section id="contact">
+                        <h3>Contact Us</h3>
+                        <form>
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" required></textarea>
+                            <button type="submit">Send</button>
+                        </form>
+                    </section>
+                </aside>
+                <div class="product-grid">
+                    <div class="product">
+                        <img src="path/to/your/image1.jpg" alt="Product 1">
+                        <h3>Product 1</h3>
+                        <p class="price">$19.99</p>
+                        <p class="category">Category 1</p>
+                        <p class="description">This is a great product.</p>
+                    </div>
+                    <div class="product">
+                        <img src="path/to/your/image2.jpg" alt="Product 2">
+                        <h3>Product 2</h3>
+                        <p class="price">$29.99</p>
+                        <p class="category">Category 2</p>
+                        <p class="description">This is another great product.</p>
+                    </div>
+                    <div class="product">
+                        <img src="path/to/your/image3.jpg" alt="Product 3">
+                        <h3>Product 3</h3>
+                        <p class="price">$39.99</p>
+                        <p class="category">Category 3</p>
+                        <p class="description">This product is top quality.</p>
+                    </div>
+                    <div class="product">
+                        <img src="path/to/your/image4.jpg" alt="Product 4">
+                        <h3>Product 4</h3>
+                        <p class="price">$49.99</p>
+                        <p class="category">Category 4</p>
+                        <p class="description">You will love this product.</p>
+                    </div>
+                    <div class="product">
+                        <img src="path/to/your/image5.jpg" alt="Product 5">
+                        <h3>Product 5</h3>
+                        <p class="price">$59.99</p>
+                        <p class="category">Category 5</p>
+                        <p class="description">A must-have product.</p>
+                    </div>
+                    <div class="product">
+                        <img src="path/to/your/image6.jpg" alt="Product 6">
+                        <h3>Product 6</h3>
+                        <p class="price">$69.99</p>
+                        <p class="category">Category 6</p>
+                        <p class="description">Highly recommended product.</p>
+                    </div>
+                    <div class="product">
+                        <img src="path/to/your/image7.jpg" alt="Product 7">
+                        <h3>Product 7</h3>
+                        <p class="price">$79.99</p>
+                        <p class="category">Category 7</p>
+                        <p class="description">Best product in this category.</p>
+                    </div>
+                    <div class="product">
+                        <img src="path/to/your/image8.jpg" alt="Product 8">
+                        <h3>Product 8</h3>
+                        <p class="price">$89.99</p>
+                        <p class="category">Category 8</p>
+                        <p class="description">A fantastic product.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Welcome to our retail store. We offer a wide range of products to cater to your needs.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Retail Store. All rights reserved.</p>
+    </footer>
+    <script>
+        // JavaScript for pagination (if needed)
+        const productsPerPage = 9;
+        const productGrid = document.querySelector('.product-grid');
+        const products = Array.from(productGrid.children);
+        let currentPage = 1;
+
+        function displayProducts(page) {
+            productGrid.innerHTML = '';
+            const start = (page - 1) * productsPerPage;
+            const end = start + productsPerPage;
+            const paginatedProducts = products.slice(start, end);
+            paginatedProducts.forEach(product => productGrid.appendChild(product));
+        }
+
+        displayProducts(currentPage);
+    </script>
+</body>
+</html>

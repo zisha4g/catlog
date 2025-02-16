@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retail Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Retail Store</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="upload.html">Upload Product</a></li>
+                <li><a href="cellphones.html">Cellphones</a></li>
+                <li><a href="office.html">All your office needs</a></li>
+                <li><a href="https://4gonwheels.com">Our retail store</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h2>Featured Products</h2>
+            <div class="content">
+                <aside class="filters">
+                    <h3>Filters</h3>
+                    <div class="filter-group">
+                        <label for="price">Price:</label>
+                        <input type="range" id="price" name="price" min="0" max="200">
+                    </div>
+                    <div class="filter-group">
+                        <label for="category">Category:</label>
+                        <select id="category">
+                            <option value="all">All</option>
+                            <option value="category1">Category 1</option>
+                            <option value="category2">Category 2</option>
+                            <option value="category3">Category 3</option>
+                        </select>
+                    </div>
+                </aside>
+                <div class="product-grid" id="product-grid">
+                    <!-- Products will be loaded here by JavaScript -->
+                </div>
+            </div>
+        </section>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Welcome to our retail store. We offer a wide range of products to cater to your needs.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Retail Store. All rights reserved.</p>
+    </footer>
+    <script src="upload.js"></script>
+</body>
+</html>
